@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1920" height="800"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var circle = function (x,y,radius) {
+            ctx.beginPath();
+            ctx.arc(x,y, radius, 0, Math.PI * 2, false);
+            ctx.stroke();
+        };
+        var fillCircle = function (x,y,radius) {
+            ctx.beginPath();
+            ctx.arc(x,y, radius, 0, Math.PI * 2, false);
+            ctx.fill();
+        };
+        var drawSnowman = function(x,y){
+            ctx.fillStyle ="Black";
+            ctx.lineWidth = 4;
+
+            circle(x+50,y+110,40);
+            circle(x+50,y+40,30);
+            fillCircle(x+40, y+35, 5);
+            fillCircle(x+60, y+35, 5);
+            fillCircle(x+50, y+90, 5);
+            fillCircle(x+50, y+110, 5);
+            fillCircle(x+50, y+130, 5);
+
+            ctx.fillStyle = "Orange";
+            fillCircle(x+50,y+45,5);
+
+        };
+        drawSnowman(0,0);
+
+        
+
+    </script>
+</body>
+</html>

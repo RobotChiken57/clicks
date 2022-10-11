@@ -1,9 +1,9 @@
-$("html").click(function(event){
+/*$("html").click(function(event){
     $("#heading").offset({
         left: event.pageX,
         top: event.pageY
     });
-});
+});*/
 
 
 var leftOffset = 0;
@@ -39,23 +39,23 @@ var moveHeading = function (){
         }
     }
 };
- var a= setInterval (moveHeading, 10);
+var a= setInterval (moveHeading, 10);
 
 var clickHandler = function () {
     clearInterval(a);
 };
 $("h1").click(clickHandler);
 
-var speed = 10;
-var  clicks =0;
+/*var speed = 50;
+var clicks = 0;
 var clickHandler = function(){
-    setInterval(moveHead, speed);
+    setInterval(moveHeading, speed);
     speed--;
-    $("h1").text(" "+clicks);
+    $("h1").text("Кол-во кликов "+clicks);
     clicks ++;
-    if (clicks >=10){
+    if (clicks >=11){
         clearInterval(a);
-        $("h1").text("sfgifj");
+        $("h1").text("Вы победили");
     }
 };
-$("h1")/click(clickHandler);
+$("h1").click(clickHandler);*/

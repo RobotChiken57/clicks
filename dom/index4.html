@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <title>Document1</title>
+    <title>Document4</title>
 </head>
 <body>
-    <script src="/script/eighty-nine.js">
-
+    <h1 id="heading">Привет, мир!</h1>
+    <script>
+                var leftOffset = 0;
+        var moveHeading = function (){
+            $("#heading").offset({left: leftOffset});
+            leftOffset++;
+            if (leftOffset > 200){
+                leftOffset=0;
+            }
+        };
+        setInterval (moveHeading, 30);
     </script>
-    
 </body>
 </html>
